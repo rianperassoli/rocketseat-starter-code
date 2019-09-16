@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Desafio 3</title>
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        var divElement = document.createElement('ul');
+
+        for (nome of nomes) {
+            var liElement = document.createElement('li');
+            var nomeElement = document.createTextNode(nome);
+
+            liElement.appendChild(nomeElement);
+            divElement.appendChild(liElement);
+        }
+
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(divElement);
+    </script>
+
+</body>
+
+</html>

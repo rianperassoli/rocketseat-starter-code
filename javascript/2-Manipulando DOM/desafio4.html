@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>Desafio 4</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+    </div>
+
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        var divElement = document.createElement('ul');
+
+        var inputElement = document.querySelector('input');
+
+        function addItem(nome){
+            var liElement = document.createElement('li');
+            var nomeElement = document.createTextNode(nome);
+
+            liElement.appendChild(nomeElement);
+            divElement.appendChild(liElement);
+        }
+
+        for (nome of nomes) {
+            addItem(nome);
+        }
+
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(divElement);
+
+        function adicionar(){
+            addItem(inputElement.value);
+            inputElement.value = '';
+        }
+
+    </script>
+
+</body>
+
+</html>

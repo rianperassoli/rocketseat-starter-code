@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Desafio 2</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <button onclick=criaElemento()>Cria Quadrado</button>
+    </div>
+
+    <script>
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function criaElemento() {
+            var divElement = document.createElement('div');
+            divElement.style.width = 100;
+            divElement.style.height = 100;
+            divElement.style.backgroundColor = '#f00';
+            divElement.onmouseover = function(){
+                divElement.style.backgroundColor = getRandomColor();
+            }
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(divElement);
+        }
+    </script>
+
+</body>
+
+</html>

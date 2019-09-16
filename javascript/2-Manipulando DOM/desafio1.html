@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Desafio 1</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <button onclick=criaElemento()>Cria Quadrado</button>
+    </div>
+
+    <script>
+        function criaElemento(){
+            var divElement = document.createElement('div');
+            divElement.style.width = 100;
+            divElement.style.height = 100;
+            divElement.style.backgroundColor = '#f00';
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(divElement);
+        }
+    </script>
+
+</body>
+
+</html>
